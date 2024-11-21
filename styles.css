@@ -1,0 +1,32 @@
+/* ... (keep the existing CSS above) ... */
+
+/* Star Animation */
+.star-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: starAnimation linear infinite;
+}
+
+@keyframes starAnimation {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* ... (keep the existing CSS below) ... */
