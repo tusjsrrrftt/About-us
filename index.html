@@ -1,102 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pydev - Modern Web Developer Portfolio</title>
-    
-    <!-- Enhanced Meta Tags -->
-    <meta name="description" content="Innovative web developer creating cutting-edge digital experiences">
-    <meta name="keywords" content="web developer, frontend, react, javascript, portfolio">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourportfolio.com">
-    <meta property="og:title" content="pydev - Web Development Portfolio">
-    <meta property="og:description" content="Explore innovative web solutions">
-    <meta property="og:image" content="/path-to-social-image.jpg">
-
-    <!-- Preload Critical Assets -->
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-</head>
-<body>
-    <!-- Modern Loading Screen -->
-    <div id="loading-overlay">
-        <div class="loader-container">
-            <div class="loader-grid">
-                <div class="loader-block"></div>
-                <div class="loader-block"></div>
-                <div class="loader-block"></div>
-                <div class="loader-block"></div>
+<header id="home" class="hero-section">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="typed-text">pydev</span>
+                    <span class="cursor">|</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Full-Stack Developer | Creative Innovator
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Let's Connect
+                    </a>
+                </div>
             </div>
-            <div class="loader-text">
-                <span>L</span>
-                <span>O</span>
-                <span>A</span>
-                <span>D</span>
-                <span>I</span>
-                <span>N</span>
-                <span>G</span>
+            <div class="hero-visual">
+                <div class="hero-avatar">
+                    <div class="avatar-wrapper">
+                        <img src="profile.jpg" alt="pydev avatar">
+                        <div class="avatar-overlay"></div>
+                    </div>
+                </div>
+                <div class="hero-tech-stack">
+                    <div class="tech-icons">
+                        <i class="fab fa-react" data-tooltip="React"></i>
+                        <i class="fab fa-js" data-tooltip="JavaScript"></i>
+                        <i class="fab fa-python" data-tooltip="Python"></i>
+                        <i class="fab fa-node-js" data-tooltip="Node.js"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Rest of your existing content -->
-    <nav>
-        <!-- Navigation remains similar -->
-    </nav>
-
-    <main>
-        <!-- Hero Section with Enhanced Interaction -->
-        <header id="home" class="hero-section">
-            <div class="hero-content">
-                <h1 class="glitch" data-text="pydev">pydev</h1>
-                <p class="typed-out">Crafting Digital Experiences</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
-                </div>
-            </div>
-        </header>
-
-        <!-- Skills Section with 3D Hover -->
-        <section id="skills" class="skills-section">
-            <h2 class="section-title">Tech Arsenal</h2>
-            <div class="skills-grid">
-                <div class="skill-card" data-tech="HTML5">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                </div>
-                <!-- More skill cards -->
-            </div>
-        </section>
-
-        <!-- Projects with Enhanced Hover -->
-        <section id="projects" class="projects-showcase">
-            <div class="project-grid">
-                <div class="project-card" data-category="web">
-                    <div class="project-image"></div>
-                    <div class="project-overlay">
-                        <h3>Project Title</h3>
-                        <p>Brief description</p>
-                    </div>
-                </div>
-                <!-- More project cards -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <!-- Footer content -->
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+    <div class="hero-background">
+        <div class="bg-overlay"></div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+</header>
