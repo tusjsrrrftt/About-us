@@ -1,47 +1,107 @@
-<header id="home" class="hero-section">
-    <div class="hero-container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="typed-text">pydev</span>
-                    <span class="cursor">|</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Full-Stack Developer | Creative Innovator
-                </p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-code"></i> View Projects
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-paper-plane"></i> Let's Connect
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-avatar">
-                    <div class="avatar-wrapper">
-                        <img src="profile.jpg" alt="pydev avatar">
-                        <div class="avatar-overlay"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyDev Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typed-text">pydev</span>
+                        <span class="cursor">|</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Full-Stack Developer | Creative Innovator
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-paper-plane"></i> Let's Connect
+                        </a>
                     </div>
                 </div>
-                <div class="hero-tech-stack">
-                    <div class="tech-icons">
-                        <i class="fab fa-react" data-tooltip="React"></i>
-                        <i class="fab fa-js" data-tooltip="JavaScript"></i>
-                        <i class="fab fa-python" data-tooltip="Python"></i>
-                        <i class="fab fa-node-js" data-tooltip="Node.js"></i>
+                <div class="hero-visual">
+                    <div class="hero-avatar">
+                        <div class="avatar-wrapper">
+                            <img src="profile.jpg" alt="pydev avatar">
+                            <div class="avatar-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="hero-tech-stack">
+                        <div class="tech-icons">
+                            <i class="fab fa-react" data-tooltip="React"></i>
+                            <i class="fab fa-js" data-tooltip="JavaScript"></i>
+                            <i class="fab fa-python" data-tooltip="Python"></i>
+                            <i class="fab fa-node-js" data-tooltip="Node.js"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="hero-background">
-        <div class="bg-overlay"></div>
-        <div class="hero-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
+        <div class="hero-background">
+            <div class="bg-overlay"></div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
+
+    <!-- Include jQuery and Typed.js for the typing effect -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const typedTextSpan = document.querySelector(".typed-text");
+            const cursorSpan = document.querySelector(".cursor");
+
+            const textArray = ["pydev"];
+            const typingDelay = 200;
+            const erasingDelay = 100;
+            const newTextDelay = 2000; // Delay between current and next text
+            let textArrayIndex = 0;
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < textArray[textArrayIndex].length) {
+                    if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingDelay);
+                } else {
+                    cursorSpan.classList.remove("typing");
+                    setTimeout(erase, newTextDelay);
+                }
+            }
+
+            function erase() {
+                if (charIndex > 0) {
+                    if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, erasingDelay);
+                } else {
+                    cursorSpan.classList.remove("typing");
+                    textArrayIndex++;
+                    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                    setTimeout(type, typingDelay + 1100);
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+                if (textArray.length) setTimeout(type, newTextDelay + 250);
+            });
+        });
+    </script>
+</body>
+</html>
