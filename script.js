@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.display = 'none';
+});
+
     const starAnimations = document.querySelectorAll('.star-animation');
 
     starAnimations.forEach(container => {
