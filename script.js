@@ -34,14 +34,28 @@ function createStars(container, count, speed) {
 
         container.appendChild(star);
     }
-// Remove loading screen when the page is fully loaded
-window.addEventListener('load', () => {
+// Function to hide the loading screen
+function hideLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
     loadingScreen.style.opacity = '0';
+    loadingScreen.style.transition = 'opacity 0.5s ease-out';
     setTimeout(() => {
         loadingScreen.style.display = 'none';
     }, 500);
-});
+}
+
+// Hide loading screen when the page is fully loaded
+window.addEventListener('load', hideLoadingScreen);
+
+// Fallback: Hide loading screen after 5 seconds if it hasn't been hidden already
+setTimeout(() => {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen.style.display !== 'none') {
+        hideLoadingScreen();
+    }
+}, 5000);
+
+// Rest of your JavaScript code...
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
