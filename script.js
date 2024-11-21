@@ -1,22 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Advanced Loading Screen
-    const loadingOverlay = document.getElementById('loading-overlay');
-    
-    window.addEventListener('load', () => {
-        gsap.to(loadingOverlay, {
-            opacity: 0,
-            duration: 0.5,
-            onComplete: () => {
-                loadingOverlay.style.display = 'none';
-            }
-        });
-    });
+    const typedText = document.querySelector('.typed-text');
+    const text = typedText.textContent;
+    typedText.textContent = '';
 
-    // Additional interactive elements
-    const skillCards = document.querySelectorAll('.skill-card');
-    skillCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            // 3D tilt effect
-        });
-    });
+    function typeText(text, element, speed = 100) {
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        type();
+    }
+
+    typeText(text, typedText);
 });
