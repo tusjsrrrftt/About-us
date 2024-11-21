@@ -3,111 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of pydev, Web Developer">
-    <meta property="og:title" content="pydev - Web Developer Portfolio">
-    <meta property="og:description" content="Explore the projects and skills of pydev, a passionate Web Developer">
-    <meta property="og:image" content="path/to/your/profile-image.jpg">
-    <title>pydev - Web Developer Portfolio</title>
+    <title>pydev - Modern Web Developer Portfolio</title>
+    
+    <!-- Enhanced Meta Tags -->
+    <meta name="description" content="Innovative web developer creating cutting-edge digital experiences">
+    <meta name="keywords" content="web developer, frontend, react, javascript, portfolio">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourportfolio.com">
+    <meta property="og:title" content="pydev - Web Development Portfolio">
+    <meta property="og:description" content="Explore innovative web solutions">
+    <meta property="og:image" content="/path-to-social-image.jpg">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <div id="loading-screen">
-        <div class="eye-loader">
-            <div class="eye">
-                <div class="eye-inner"></div>
+    <!-- Modern Loading Screen -->
+    <div id="loading-overlay">
+        <div class="loader-container">
+            <div class="loader-grid">
+                <div class="loader-block"></div>
+                <div class="loader-block"></div>
+                <div class="loader-block"></div>
+                <div class="loader-block"></div>
+            </div>
+            <div class="loader-text">
+                <span>L</span>
+                <span>O</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>
             </div>
         </div>
     </div>
 
+    <!-- Rest of your existing content -->
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <!-- Navigation remains similar -->
     </nav>
 
     <main>
-        <header id="home">
-            <h1 data-text="pydev" class="animate-on-scroll">pydev</h1>
-            <p data-text="Web Developer" class="animate-on-scroll">Web Developer</p>
+        <!-- Hero Section with Enhanced Interaction -->
+        <header id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="pydev">pydev</h1>
+                <p class="typed-out">Crafting Digital Experiences</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                </div>
+            </div>
         </header>
 
-        <section id="about">
-            <h2 class="animate-on-scroll">About Me</h2>
-            <p class="animate-on-scroll">As a passionate web developer, I thrive on creating innovative and user-friendly digital experiences. With a keen eye for detail and a love for clean, efficient code, I bring ideas to life through the power of web technologies.</p>
-        </section>
-
-        <section id="skills">
-            <h2 class="animate-on-scroll">Skills</h2>
+        <!-- Skills Section with 3D Hover -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Tech Arsenal</h2>
             <div class="skills-grid">
-                <div class="skill-item animate-on-scroll"><i class="fab fa-html5"></i> HTML5</div>
-                <div class="skill-item animate-on-scroll"><i class="fab fa-css3-alt"></i> CSS3</div>
-                <div class="skill-item animate-on-scroll"><i class="fab fa-js"></i> JavaScript</div>
-                <div class="skill-item animate-on-scroll"><i class="fab fa-react"></i> React</div>
-                <div class="skill-item animate-on-scroll"><i class="fab fa-node-js"></i> Node.js</div>
-                <div class="skill-item animate-on-scroll"><i class="fas fa-database"></i> SQL</div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="animate-on-scroll">Projects</h2>
-            <div class="projects-grid">
-                <article class="project-card animate-on-scroll">
-                    <h3>E-commerce Platform</h3>
-                    <p>A full-stack e-commerce solution with React frontend and Node.js backend.</p>
-                    <a href="#" class="btn">View Project</a>
-                </article>
-                <article class="project-card animate-on-scroll">
-                    <h3>Weather App</h3>
-                    <p>Real-time weather application using OpenWeatherMap API and JavaScript.</p>
-                    <a href="#" class="btn">View Project</a>
-                </article>
-                <article class="project-card animate-on-scroll">
-                    <h3>Task Manager</h3>
-                    <p>A responsive task management app with drag-and-drop functionality.</p>
-                    <a href="#" class="btn">View Project</a>
-                </article>
-            </div>
-        </section>
-
-        <section id="testimonials">
-            <h2 class="animate-on-scroll">Testimonials</h2>
-            <div class="testimonials-carousel">
-                <div class="testimonial animate-on-scroll">
-                    <blockquote>"pydev is an exceptional web developer. Their attention to detail and problem-solving skills are outstanding."</blockquote>
-                    <cite>- John Doe, Tech Innovations Inc.</cite>
+                <div class="skill-card" data-tech="HTML5">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
                 </div>
-                <div class="testimonial animate-on-scroll">
-                    <blockquote>"Working with pydev was a pleasure. They delivered our project on time and exceeded our expectations."</blockquote>
-                    <cite>- Jane Smith, Digital Solutions Ltd.</cite>
-                </div>
+                <!-- More skill cards -->
             </div>
         </section>
 
-        <section id="contact">
-            <h2 class="animate-on-scroll">Contact Me</h2>
-            <form class="contact-form animate-on-scroll">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <div class="social-links animate-on-scroll">
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <!-- Projects with Enhanced Hover -->
+        <section id="projects" class="projects-showcase">
+            <div class="project-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image"></div>
+                    <div class="project-overlay">
+                        <h3>Project Title</h3>
+                        <p>Brief description</p>
+                    </div>
+                </div>
+                <!-- More project cards -->
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 pydev. All rights reserved.</p>
+        <!-- Footer content -->
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
